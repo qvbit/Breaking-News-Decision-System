@@ -58,7 +58,7 @@ def location_features(df, save=False):
     def drop_noGPE(docs):
         drop = []
         for i, doc in enumerate(docs):
-            if len([ent for ent in doc.ents if ent.label_ == 'GPE']) == 0:
+            if len([ent for ent in doc.ents if ent.label_ == 'GPE' or ent.label_=='LOC']) == 0:
                 drop.append(i)
 
         for index in sorted(drop, reverse=True):
@@ -75,13 +75,13 @@ def location_features(df, save=False):
     
     for i, doc in enumerate(docs):
 
-        names = [ent.text for ent in doc.ents if ent.label_ == 'GPE']
-        loc_ents = [ent for ent in doc.ents if ent.label_=='GPE']
+        names = [ent.text for ent in doc.ents if ent.label_ == 'GPE' or ent.label_=='LOC']
+        loc_ents = [ent for ent in doc.ents if ent.label_=='GPE' or ent.label_=='LOC']
         num_examples = len(names)
         doc_num = [i for _ in range(num_examples)]
 
         # Feature 1
-        f1 = np.array([ent.sent.vector for ent in doc.ents if ent.label_ == 'GPE'])
+        f1 = np.array([ent.sent.vector for ent in doc.ents if ent.label_ == 'GPE' or ent.label_=='LOC'])
 
         # Feature 2
         f2 = np.zeros((num_examples, num_ents))
