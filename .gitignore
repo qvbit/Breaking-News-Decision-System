@@ -1,7 +1,10 @@
 # Files to ignore
 
-NER_Visualization.ipynb
 Time_Visualization.ipynb
 
 
 *.DS_Store
+Stage 2/NER_Visualization.ipynb
+*.pkl
+*.csv
+Stage 2/NER_Visualization.ipynb

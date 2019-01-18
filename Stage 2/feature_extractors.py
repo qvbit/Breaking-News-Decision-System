@@ -4,8 +4,6 @@ import spacy as spacy
 from spacy import displacy
 from collections import Counter
 
-
-
 POS_MAP = {'ADJ' : 0,
           'ADP' : 1,
           'ADV': 2,
