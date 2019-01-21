@@ -10,3 +10,4 @@ Stage 2/NER_Visualization.ipynb
 test.ipynb
 *.ipynb_checkpoints
 *.pkl
+*.ipynb_checkpoints
