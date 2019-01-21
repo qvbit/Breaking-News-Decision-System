@@ -7,4 +7,6 @@ Time_Visualization.ipynb
 Stage 2/NER_Visualization.ipynb
 *.pkl
 *.csv
-Stage 2/NER_Visualization.ipynb
+test.ipynb
+*.ipynb_checkpoints
+*.pkl
