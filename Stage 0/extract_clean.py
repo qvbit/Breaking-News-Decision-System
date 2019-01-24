@@ -151,7 +151,7 @@ if __name__ == '__main__':
     df['body'] = body_stripped
     
     
-    print('Cleaning done, saving dataframe to disk, now labelling earthquakes and their locations')
+    print('Cleaning done, saving dataframe to disk')
     pd.to_pickle(df, '../dataframes/df_clean.pkl')
 
     df_eq = pd.read_csv('../data/quakes - quakes.csv')
