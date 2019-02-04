@@ -133,10 +133,6 @@ def eq_only(df):
 
 if __name__ == '__main__':
     df = pd.read_pickle('../dataframes/df_eq_label.pkl')
-    df = eq_only(df)
-
-    df = df[['_id', 'body', 'headline', 'summary', 'categories', 'T0', 'T1', 'T2']]
-    df['categories'] = df['categories'].apply(lambda x: '. '.join(x))
 
     combined = [t + '. ' + h + '. ' + s + ' ' + b  for t, h, s, b in
                         zip(list(df['categories']), list(df['headline']), list(df['summary']), list(df['body']))]
